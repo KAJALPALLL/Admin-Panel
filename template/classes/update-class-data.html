@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container" style="margin:auto;width:100%;">
+    <h3 align="center">Update Classes Data </h3>
+    <div class="form-group">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>Title:
+                {{form.title}}
+            </div><br>
+            <div>Description:
+                {{form.description}}
+            </div><br>
+            <div>URL:
+                {{form.url}}
+            </div><br>
+            <div>Status:
+                {{form.status}}
+            </div><br>
+            <div>Image:<br>
+                {{form.image}}
+            </div><br>
+            <div align="center">
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </div>
+
+        </form>
+        <div>
+          {% for message in messages %}
+          <h4> {{message}} </h4>
+          {% endfor %}
+      </div>
+    </div>
+</div>
+{% endblock %}
