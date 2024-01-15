@@ -76,20 +76,8 @@ WSGI_APPLICATION = 'Blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Dashboard',
-        'USER': 'postgres',
-        'PASSWORD': 'office',
-        'HOST': 'localhost',
 
-
-    }
-}
-
-
-# Password validation
+validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
